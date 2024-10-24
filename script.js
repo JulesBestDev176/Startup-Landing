@@ -6,6 +6,7 @@ const navbar = document.querySelector(".navbar");
 const close = document.querySelector(".close");
 const panel = document.querySelector(".panel");
 const open = document.getElementById("open");
+let currentSlide = 0;
 // SCROLL DEBUT
 
 window.addEventListener("scroll", function () {
@@ -45,3 +46,7 @@ close.addEventListener("click", (e) => {
   panel.classList.add("invisible");
 });
 // CLOSE SIDEBAR DEBUT
+
+// CAROUSSEL DEBUT
+
+// CAROUSSEL FIN

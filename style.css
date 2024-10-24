@@ -601,6 +601,8 @@ body{
     margin-bottom: 100px;
 }
 
+
+
 .nouvelles .cards {
     display: flex;
     align-items: center;
@@ -658,6 +660,25 @@ body{
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 100;
+  }
+  
+  .prev {
+    left: 10px;
+  }
+  
+  .next {
+    right: 10px;
+  }
 
 /* NOUVELLES FIN */
 
@@ -683,7 +704,7 @@ footer .card {
 
 .card .left {
     font-family: "DM sans", sans-serif;
-    font-size: 32px;
+    font-size: 26px;
     color: var(--white-color);
     font-weight: 700;
 }
@@ -817,7 +838,7 @@ footer .line{
         }
     
         .nouvelles .cards .card:nth-child(3) {
-            display: none; /* Cache la 3ème carte */
+            display: none; 
         }
         footer .card {
             background-image: none;
@@ -854,6 +875,7 @@ footer .line{
             height: 400px;
 
         }
+        
 
         .panel {
             
@@ -920,6 +942,7 @@ footer .line{
         .header {
             flex-direction: column;
         }
+        
 
         .gauche {
             padding: 0 40px;
@@ -1081,7 +1104,13 @@ footer .line{
             width: 100%;
         }
         
-        
+        .nouvelles .cards .card {
+            flex: 0 0 100%; /* Chaque carte prend 50% de l'espace */
+        }
+    
+        .nouvelles .cards .card:nth-child(2) {
+            display: none; 
+        }
         .navbar.scrolled{
             padding:30px 10px 20px 10px;
         }
