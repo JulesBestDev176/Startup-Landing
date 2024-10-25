@@ -10,7 +10,9 @@ const prevButton = document.getElementById("prev");
 const nextButton = document.getElementById("next");
 
 const cards = document.querySelectorAll(".nouvelles .slider .centre .card");
-
+const paragraphe = document.querySelectorAll(
+  ".commentaires .slider .centre .top .paragraphe"
+);
 let currentIndex = 0;
 const cardWidth = 365;
 // SCROLL DEBUT
@@ -81,3 +83,17 @@ function updateCardsPosition() {
 }
 
 // CAROUSSEL FIN
+
+document.querySelectorAll(".user").forEach(function (user, index) {
+  user.addEventListener("click", function () {
+    // Retirer la classe 'actif' de tous les utilisateurs
+    document.querySelectorAll(".user").forEach(function (u) {
+      u.classList.remove("actif");
+    });
+    paragraphe.forEach((p) => p.classList.remove("actif"));
+
+    // Ajouter la classe 'actif' à l'utilisateur cliqué
+    paragraphe[index].classList.add("actif");
+    this.classList.add("actif");
+  });
+});

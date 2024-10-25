@@ -440,74 +440,125 @@ body{
     margin-bottom: 50px;
 }
 
-.commentaires .commentaire {
+.commentaires .slider {
+    width: 100%;
     display: flex;
-    overflow: hidden;
-    width: 80%;
+    justify-content: center;
+
 }
 
-.commentaires .commentaire p {
-    flex: 0 0 30%;
-    padding: 20px 80px;
+.commentaires .slider .left,
+.commentaires .slider .right {
+    /* background-color: green; */
+    width: 20%;
+    margin: 0;
+}
+
+.commentaires .slider .centre {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* position: relative; */
+}
+
+.commentaires .slider .centre .top {
+    /* background-color: blue; */
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    overflow: hidden;
+    padding: 0;
+    /* position: relative; */
+}
+
+.commentaires .slider .centre .top .paragraphe {
+    width: 100%;
+    /* background-color: green; */
+    margin: 0;
+    padding: 0;
+    flex-shrink: 0;
+    text-align: center;
+    display: none;
+   
+}
+
+.commentaires .slider .centre .top .paragraphe.actif {
+    display: block;
+}
+
+.commentaires .slider .centre .top .paragraphe p {
     text-align: center;
     font-family: "Playfair Display", serif;
     color: var(--text-color);
-    font-size: 40px;
+    font-size: 30px;
     font-weight: 300;
-    line-height: 70px;
-    display: none; 
+    line-height: 50px;
 }
 
-.commentaires .commentaire p.actif {
-    display: block; /* Affiche le paragraphe actif */
-}
-
-.commentaires .users {
-    width: 70%;
+.commentaires .slider .centre .bottom {
+    /* background-color: yellow; */
+    width: 100%;
     overflow: hidden; 
     white-space: nowrap; 
     display: flex;
-}
-
-.commentaires .users .user {
-    position: relative;
-    display: flex;
     justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    vertical-align: top; 
-    margin-right: 2%;
-    box-sizing: border-box;
+
 }
 
-.commentaires .users .user:last-child {
-    margin-right: 0; 
+.commentaires .slider .centre .bottom .users {
+    width: 100%;
+    display: flex;
+    overflow: hidden;
 }
 
-.user .image {
+.commentaires .slider .centre .bottom .users .user {
+    display: flex;
+    min-width: 30%;
+    justify-content: space-between;
+    background-color: #d6d6d6;
+    margin:0 20px;
+    position: relative;
+    cursor: pointer;
+}
+
+.commentaires .slider .centre .bottom .users .user .image {
     /* width: 20%; */
     text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+
 }
 
-.user .info .line {
-    margin-bottom: 10px;
+.commentaires .slider .centre .bottom .users .user .info {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
 }
 
-.user .info .line h3 {
+
+
+.commentaires .slider .centre .bottom .users .user .info .line h3 {
     font-family: "DM Sans", sans-serif;
     font-size: 20px;
     font-weight: 500;
     color: var(--text-color);
 }
 
-.user .info .line p {
+.commentaires .slider .centre .bottom .users .user .info .line p {
     font-family: "DM Sans", sans-serif;
     font-size: 20px;
     font-weight: 300;
     color: #757575;
 }
 
-.user.actif::before {
+/* .commentaires .slider .bottom .user.actif {} */
+
+.commentaires .slider .centre .bottom .users .user.actif::before {
     content: '';
     position: absolute;
     top: 0;
@@ -517,6 +568,14 @@ body{
     background-color: var(--primary-color);
     z-index: 1;
 }
+
+
+.commentaires .slider .centre .bottom .users .user:last-child {
+    margin-right: 0; 
+}
+
+
+
 
 /* COMMENTAIRES FIN */
 
@@ -945,7 +1004,13 @@ footer .line{
         .header {
             flex-direction: column;
         }
-        
+        .commentaires .slider .centre .bottom .users {
+            flex-direction: column;
+        }
+
+        .commentaires .slider .centre .bottom .users .user {
+            margin: 0 0 20px 0;
+        }
 
         .gauche {
             padding: 0 40px;
@@ -1092,7 +1157,12 @@ footer .line{
             font-size: 16px;
         
         }
-        
+        .nouvelles .slider .centre {
+            width: 60%;
+        }
+        .nouvelles .slider .centre .card {
+            width: 300px;
+        }
 
     }
 
@@ -1106,14 +1176,10 @@ footer .line{
             padding: 10px;
             width: 100%;
         }
-        
-        .nouvelles .cards .card {
-            flex: 0 0 100%; /* Chaque carte prend 50% de l'espace */
+        .nouvelles .slider .centre .card {
+            width: 125px;
         }
     
-        .nouvelles .cards .card:nth-child(2) {
-            display: none; 
-        }
         .navbar.scrolled{
             padding:30px 10px 20px 10px;
         }
@@ -1122,7 +1188,12 @@ footer .line{
             width: 150px;
         }
 
-        
+        .nouvelles .slider .centre {
+            width: 50%;
+        }
+        .nouvelles .slider .centre .card {
+            width: 100px;
+        }
         
         
         
