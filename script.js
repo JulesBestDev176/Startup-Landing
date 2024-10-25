@@ -6,7 +6,13 @@ const navbar = document.querySelector(".navbar");
 const close = document.querySelector(".close");
 const panel = document.querySelector(".panel");
 const open = document.getElementById("open");
-let currentSlide = 0;
+const prevButton = document.getElementById("prev");
+const nextButton = document.getElementById("next");
+
+const cards = document.querySelectorAll(".nouvelles .slider .centre .card");
+
+let currentIndex = 0;
+const cardWidth = 365;
 // SCROLL DEBUT
 
 window.addEventListener("scroll", function () {
@@ -48,5 +54,30 @@ close.addEventListener("click", (e) => {
 // CLOSE SIDEBAR DEBUT
 
 // CAROUSSEL DEBUT
+nextButton.addEventListener("click", () => {
+  if (currentIndex < cards.length - 3) {
+    currentIndex++;
+    console.log(currentIndex);
+    updateCardsPosition();
+  }
+});
+
+prevButton.addEventListener("click", () => {
+  if (currentIndex > -(cards.length - 1)) {
+    currentIndex--;
+    console.log(currentIndex);
+    updateCardsPosition();
+  }
+});
+
+function updateCardsPosition() {
+  const offset = currentIndex * cardWidth;
+
+  cards.forEach((card) => {
+    card.style.transform = `translateX(${offset}px)`;
+    card.style.transition = "transform 0.3s ease-in-out";
+  });
+  // Animation de transition
+}
 
 // CAROUSSEL FIN

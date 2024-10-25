@@ -601,8 +601,6 @@ body{
     margin-bottom: 100px;
 }
 
-
-
 .nouvelles .cards {
     display: flex;
     align-items: center;
@@ -610,24 +608,51 @@ body{
     width: 100%;
 }
 
-.nouvelles .cards .card {
-    flex: 0 0 33.33%; /* Ajuste pour 3 cartes */
-    margin-right: 2%;
-    background-color: var(--white-color);
-    border-radius: 6px;
-}
-
-/* Cache les images qui débordent */
-.nouvelles .cards .card .haut img {
+.nouvelles .slider {
     width: 100%;
-    border-radius: 6px 6px 0 0; /* Arrondi seulement en haut */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 500px;
 }
 
-.nouvelles .cards .card .bas {
-    padding: 40px;
+.nouvelles .slider .centre {
+    width: 80%;
+    height: 100%;
+    /* background-color: red; */
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
+    /* justify-content: f; */
+    transition: transform 0.3s ease-in-out; 
 }
 
-.nouvelles .cards .card .bas .titre {
+.nouvelles .slider .centre .card {
+    width: 325px;
+    height: 400px;
+    background-color: white;
+    border-radius: 6px;
+    margin: 0 20px;
+    flex: 0 0 auto;
+}
+
+.nouvelles .slider .centre .card .haut img {
+    width: 100%;
+    border-radius: 6px 6px 0 0; 
+}
+
+.nouvelles .slider .centre .card .bas {
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.nouvelles .slider .centre .card .bas .titre {
     color: var(--text-color);
     text-align: left;
     font-size: 20px;
@@ -636,49 +661,27 @@ body{
     cursor: pointer;
 }
 
-.nouvelles .cards .card .bas .titre:hover {
+.nouvelles .slider .centre .card .bas .titre:hover {
     color: var(--primary-color);
 }
 
-.nouvelles .cards .card .bas .comment {
+.nouvelles .slider .centre .card .bas .comment {
     color: #adadad;
     font-size: 20px;
     font-family: "DM sans", sans-serif;
     font-weight: 300;
 }
 
-.nouvelles button {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(255, 255, 255, 0.8);
-    border: none;
+.nouvelles .slider .left,
+.nouvelles .slider .right {
+    content: "";
+    width: 10%;
+    height: 100%;
     cursor: pointer;
-    font-size: 24px;
-    padding: 10px;
-    border-radius: 50%;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    /* background-color: blue; */
 }
 
-.prev, .next {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-    z-index: 100;
-  }
-  
-  .prev {
-    left: 10px;
-  }
-  
-  .next {
-    right: 10px;
-  }
+
 
 /* NOUVELLES FIN */
 
