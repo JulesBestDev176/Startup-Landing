@@ -171,6 +171,7 @@ body{
     color: var(--white-color);
     font-size: 18px;
     font-weight: 500;
+    cursor: pointer;
 }
 
 .gauche .newsletter {
@@ -331,6 +332,7 @@ body{
     margin-bottom: 20px;
     font-weight: 500;
     color: var(--text-color);
+
 
 }
 
@@ -551,7 +553,7 @@ body{
 
 .commentaires .slider .centre .bottom .users .user .info .line p {
     font-family: "DM Sans", sans-serif;
-    font-size: 20px;
+    font-size: 16px;
     font-weight: 300;
     color: #757575;
 }
