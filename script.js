@@ -14,14 +14,14 @@ const paragraphe = document.querySelectorAll(
   ".commentaires .slider .centre .top .paragraphe"
 );
 let currentIndex = 0;
-const cardWidth = 365;
+const cardWidth = 400;
 // SCROLL DEBUT
 
 window.addEventListener("scroll", function () {
-  if (window.scrollY < 70) {
+  if (window.scrollY < 50) {
     navbar.classList.remove("scrolled");
     navbar.classList.remove("transparent");
-  } else if (window.scrollY >= 70 && window.scrollY <= 150) {
+  } else if (window.scrollY >= 50 && window.scrollY <= 150) {
     navbar.classList.add("transparent");
   } else {
     navbar.classList.remove("transparent");
