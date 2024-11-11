@@ -8,6 +8,8 @@ const panel = document.querySelector(".panel");
 const open = document.getElementById("open");
 const prevButton = document.getElementById("prev");
 const nextButton = document.getElementById("next");
+const links = document.querySelectorAll(".link");
+const sections = document.querySelectorAll(".section");
 
 const cards = document.querySelectorAll(".nouvelles .slider .centre .card");
 const paragraphe = document.querySelectorAll(
@@ -20,11 +22,11 @@ const cardWidth = 400;
 window.addEventListener("scroll", function () {
   if (window.scrollY < 50) {
     navbar.classList.remove("scrolled");
-    navbar.classList.remove("transparent");
+    // navbar.classList.remove("transparent");
   } else if (window.scrollY >= 50 && window.scrollY <= 150) {
-    navbar.classList.add("transparent");
+    // navbar.classList.add("transparent");
   } else {
-    navbar.classList.remove("transparent");
+    // navbar.classList.remove("transparent");
     navbar.classList.add("scrolled");
   }
 });
@@ -90,10 +92,40 @@ document.querySelectorAll(".user").forEach(function (user, index) {
     document.querySelectorAll(".user").forEach(function (u) {
       u.classList.remove("actif");
     });
-    paragraphe.forEach((p) => p.classList.remove("actif"));
+    paragraphe.forEach((p) => {
+      p.style.transition = "all 5s ease";
+      p.classList.remove("actif");
+    });
 
     // Ajouter la classe 'actif' à l'utilisateur cliqué
     paragraphe[index].classList.add("actif");
     this.classList.add("actif");
   });
+});
+
+links.forEach(function (link, index) {
+  link.addEventListener("click", function () {
+    links.forEach(function (l) {
+      l.classList.remove("actif");
+    });
+    link.classList.add("actif");
+    console.log(link);
+  });
+});
+
+function getVisibleSectionIndex() {
+  let index = sections.length; // Initialisation de l'index à la dernière section
+
+  // Parcours les sections pour trouver celle actuellement visible
+  while (--index && window.scrollY + 50 < sections[index].offsetTop) {}
+
+  return index; // Retourne l'index de la section visible
+}
+
+window.addEventListener("scroll", () => {
+  const index = getVisibleSectionIndex();
+  links.forEach(function (link) {
+    link.classList.remove("actif");
+  });
+  links[index].classList.add("actif");
 });

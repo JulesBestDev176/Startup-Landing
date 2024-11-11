@@ -106,6 +106,8 @@ body{
     color: var(--primary-color);
 }
 
+
+
 .bouton {
     border: 2px solid #8d448b;
     border-radius: 5px;
@@ -534,11 +536,15 @@ body{
     flex-shrink: 0;
     text-align: center;
     display: none;
+
    
 }
 
 .commentaires .slider .centre .top .paragraphe.actif {
     display: block;
+    transition: all 5s ease;
+
+
 }
 
 .commentaires .slider .centre .top .paragraphe p {
@@ -548,7 +554,7 @@ body{
     font-size: 32px;
     font-weight: 300;
     line-height: 50px;
-    transition: all 2s ease-out;
+
 }
 
 .commentaires .slider .centre .bottom {
@@ -787,6 +793,7 @@ body{
 
 
 
+
 .nouvelles .slider .centre .card .bas .titre {
     color: var(--text-color);
     text-align: left;
@@ -802,7 +809,7 @@ body{
 
 .nouvelles .slider .centre .card .bas .comment {
     color: #adadad;
-    font-size: 20px;
+    font-size: 16px;
     font-family: "DM sans", sans-serif;
     font-weight: 300;
     display: flex;
@@ -1030,16 +1037,10 @@ footer .line{
         }
         
 
-        .panel {
-            
-            width: 70%;
-        }
         .navbar .menu {
-            display: none;
+            width: 50%;
         }
-        .btn-menu {
-            display: block;
-        }
+        
         .assistance {
             display: flex;
             flex-direction: column;
@@ -1051,10 +1052,17 @@ footer .line{
         }
         .assistance .left{
             width: 100%;
+            
+        }
+
+        .assistance .left .titre {
+            display: flex;
+            justify-content: center;
         }
         
         .assistance .left .titre h2 {
             text-align: center;
+            
         }
         
         .assistance .left .paragraphe1 {
@@ -1092,8 +1100,37 @@ footer .line{
     }
 
     @media screen and (max-width: 930px) {
+        .assistance {
+            align-items: center;
+            justify-content: center;
+        }
+        .assistance .left .titre {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            
+        }
+
+        
+
+        .assistance .left .titre h2{
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            font-size: 28px;
+            width: 100%;
+        }
         .header {
             flex-direction: column;
+        }
+        .header .gauche .icone {
+            display: none;
+        }
+
+        .header .droite  {
+            margin-top: 30px;
         }
         .commentaires .slider .centre .bottom .users {
             flex-direction: column;
@@ -1179,8 +1216,10 @@ footer .line{
 
         
         .partie3 .titre {
-            width: 100%;
+            width: 90%;
         }
+
+        
 
         .partie3 .paragraphe p {
             font-size: 16px;
@@ -1190,12 +1229,12 @@ footer .line{
             font-size: 20px;
         }
         .partie3 .video { 
-            width: 700px;
+            width: 500px;
         }
         
         
         .partie3 .video img{
-            width: 700px;
+            width: 500px;
         }
 
         iframe {
@@ -1208,7 +1247,7 @@ footer .line{
         }
         
         .commentaires .titre h2 {
-            font-size: 22px;
+            font-size: 28px;
         }
         
         .commentaires .commentaire {
@@ -1236,6 +1275,10 @@ footer .line{
         .commentaires .users .user {
             width: 100%; 
             margin-right: 4%; 
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
         }
         .user .info .line {
             margin-bottom: 10px;
@@ -1254,11 +1297,111 @@ footer .line{
         .nouvelles .slider .centre .card {
             width: 300px;
         }
+        .line .copyright {
+            margin-right: 0;
+            
+        }
 
+    }
+    @media screen and (max-width: 760px) {
+        .panel {
+            
+            width: 60%;
+        }
+        .navbar .menu {
+            display: none;
+        }
+        .btn-menu {
+            display: block;
+        }
+        .assistance {
+            align-items: center;
+            justify-content: center;
+        }
+        .assistance .left {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .assistance .left .titre h2{
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+        }
+        .nouvelles .slider {
+            min-height: 1000px;
+        }
+
+        .nouvelles .slider .centre {
+            display: flex;
+            flex-direction: column;
+            overflow: visible;
+        }
+
+        .nouvelles .slider .centre .card {
+            margin-bottom: 20px;
+        }
+
+        .nouvelles .slider .centre .card .bas .comment {
+            font-size: 15px;
+        }
+        footer .card {
+            
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+        
+        footer .line{
+            width: 100%;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            transform: translateY(-50%);
+            flex-direction: column;
+            
+        }
+        .line .logo img {
+            width: 200px;
+        }
+        
+        .line .copyright {
+            font-size: 11px;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            
+        }
+        .droite {
+            padding:0px;
+        } 
+        .line .menu  {
+            display: none;
+            width: 0;
+        }
+        .card .right {
+            margin-top: 20px;
+        }
+        .card .right button::before {
+            display: none;
+        }
+        
+        .card .right button::after {
+            display: none;
+
+        }
+
+        
+        
     }
 
     @media screen and (max-width: 500px) {
-            
+        
         .header {
             width: 100%;
             margin: 0;
@@ -1267,9 +1410,7 @@ footer .line{
             padding: 10px;
             width: 100%;
         }
-        .nouvelles .slider .centre .card {
-            width: 125px;
-        }
+        
     
         .navbar.scrolled{
             padding:30px 10px 20px 10px;
@@ -1279,12 +1420,7 @@ footer .line{
             width: 150px;
         }
 
-        .nouvelles .slider .centre {
-            width: 50%;
-        }
-        .nouvelles .slider .centre .card {
-            width: 100px;
-        }
+        
         
         
         

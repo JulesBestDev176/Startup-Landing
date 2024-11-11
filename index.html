@@ -28,10 +28,16 @@
           <img src="assets/image/logo.svg" alt="logo" />
         </div>
         <div class="menu">
-          <div><a class="actif" href="#maison">Home</a></div>
-          <div><a href="#services">Services</a></div>
-          <div><a href="#temoignages">Testimonials</a></div>
-          <div><a href="#nouvelles">News</a></div>
+          <div><a id="home-link" class="link" href="#maison">Home</a></div>
+          <div>
+            <a id="services-link" class="link" href="#services">Services</a>
+          </div>
+          <div>
+            <a id="testimonials-link" class="link" href="#temoignages"
+              >Testimonials</a
+            >
+          </div>
+          <div><a id="news-link" class="link" href="#nouvelles">News</a></div>
         </div>
         <div class="bouton" id="inscrire">
           <a href="#">Register Now</a>
@@ -44,7 +50,7 @@
     <!-- NAVBAR FIN -->
 
     <!-- HEADER DEBUT -->
-    <div class="header" id="maison">
+    <div class="header section" id="maison">
       <div class="gauche">
         <div class="titre">
           <h1>
@@ -89,7 +95,7 @@
     <!-- HEADER FIN -->
 
     <!-- CARACTERISTIQUES DEBUT -->
-    <div class="caracteristiques container" id="services">
+    <div class="caracteristiques container section" id="services">
       <div>
         <p>Quality features</p>
       </div>
@@ -229,90 +235,92 @@
     </div>
     <!-- CARACTERISTIQUES FIN -->
 
-    <!-- COMMENTAIRES DEBUT -->
-    <div class="commentaires" id="temoignages">
-      <div class="top">
-        <p>Customer Comments</p>
-      </div>
-      <div class="titre">
-        <h2>Why customers love us</h2>
-      </div>
-
-      <div class="slider">
-        <div class="left" id="prevLeft"></div>
-        <div class="centre">
-          <div class="top">
-            <div class="paragraphe actif">
-              <p class="">
-                They are doing amazing job with hundred percent
-                <br />
-                customer satisfaction, Love their work and would like to <br />
-                work with them again
-              </p>
-            </div>
-            <div class="paragraphe">
-              <p class="">
-                Capitalize on low hanging fruit to identify a ballpark<br />
-                value added activity to beta test. Override the digital<br />
-                divide with additional.
-              </p>
-            </div>
-            <div class="paragraphe">
-              <p class="">
-                Bring to the table win-win survival strategies to ensure<br />
-                proactive domination. At the end of the day, going<br />
-                forward, a new normal.
-              </p>
-            </div>
-          </div>
-          <div class="bottom">
-            <div class="users">
-              <div class="user actif">
-                <div class="image">
-                  <img src="assets/image/pierre.png" alt="" />
-                </div>
-                <div class="info">
-                  <div class="line">
-                    <h3>Pierre Hacket</h3>
-                  </div>
-                  <div class="line">
-                    <p>VP of Engineering</p>
-                  </div>
-                </div>
-              </div>
-              <div class="user">
-                <div class="image">
-                  <img src="assets/image/ece.png" alt="" />
-                </div>
-                <div class="info">
-                  <div class="line">
-                    <h3>Ece Akman</h3>
-                  </div>
-                  <div class="line">
-                    <p>Senior Marketer</p>
-                  </div>
-                </div>
-              </div>
-              <div class="user">
-                <div class="image">
-                  <img src="assets/image/natalia.png" alt="" />
-                </div>
-                <div class="info">
-                  <div class="line">
-                    <h3>Natalia Sanz</h3>
-                  </div>
-                  <div class="line">
-                    <p>Head of Technology</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+    <div class="section">
+      <!-- COMMENTAIRES DEBUT -->
+      <div class="commentaires section" id="temoignages">
+        <div class="top">
+          <p>Customer Comments</p>
         </div>
-        <div class="right" id="nextLeft"></div>
-      </div>
+        <div class="titre">
+          <h2>Why customers love us</h2>
+        </div>
 
-      <!-- <div class="commentaire">
+        <div class="slider">
+          <div class="left" id="prevLeft"></div>
+          <div class="centre">
+            <div class="top">
+              <div class="paragraphe actif">
+                <p class="">
+                  They are doing amazing job with hundred percent
+                  <br />
+                  customer satisfaction, Love their work and would like to
+                  <br />
+                  work with them again
+                </p>
+              </div>
+              <div class="paragraphe">
+                <p class="">
+                  Capitalize on low hanging fruit to identify a ballpark<br />
+                  value added activity to beta test. Override the digital<br />
+                  divide with additional.
+                </p>
+              </div>
+              <div class="paragraphe">
+                <p class="">
+                  Bring to the table win-win survival strategies to ensure<br />
+                  proactive domination. At the end of the day, going<br />
+                  forward, a new normal.
+                </p>
+              </div>
+            </div>
+            <div class="bottom">
+              <div class="users">
+                <div class="user actif">
+                  <div class="image">
+                    <img src="assets/image/pierre.png" alt="" />
+                  </div>
+                  <div class="info">
+                    <div class="line">
+                      <h3>Pierre Hacket</h3>
+                    </div>
+                    <div class="line">
+                      <p>VP of Engineering</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="user">
+                  <div class="image">
+                    <img src="assets/image/ece.png" alt="" />
+                  </div>
+                  <div class="info">
+                    <div class="line">
+                      <h3>Ece Akman</h3>
+                    </div>
+                    <div class="line">
+                      <p>Senior Marketer</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="user">
+                  <div class="image">
+                    <img src="assets/image/natalia.png" alt="" />
+                  </div>
+                  <div class="info">
+                    <div class="line">
+                      <h3>Natalia Sanz</h3>
+                    </div>
+                    <div class="line">
+                      <p>Head of Technology</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="right" id="nextLeft"></div>
+        </div>
+
+        <!-- <div class="commentaire">
         <div class="paragraphe">
           <p class="">
             Ils font un travail incroyable avec une satisfaction client <br />
@@ -369,43 +377,46 @@
         
         
       </div> -->
-    </div>
-    <!-- COMMENTAIRES FIN -->
+      </div>
+      <!-- COMMENTAIRES FIN -->
 
-    <!-- ASSISTANCE DEBUT -->
-    <div class="assistance">
-      <div class="left">
-        <div class="titre">
-          <h2>Free Customer Support to ensure what you like to expect</h2>
+      <!-- ASSISTANCE DEBUT -->
+      <div class="assistance">
+        <div class="left">
+          <div class="titre">
+            <h2>Free Customer Support to ensure what you like to expect</h2>
+          </div>
+          <div class="paragraphe1">
+            <p>
+              We offer a risk-free trial period of up to two weeks. You will
+              only have to pay if you are happy with the developer and wish to
+              continue. If you are unsatisfied, we’ll refund payment or fix
+              <br />
+              issues on our dime period customers.
+            </p>
+          </div>
+          <div class="paragraphe2">
+            <p>
+              If you are happy with the developer and wish to continue. If
+              you<br />
+              are unsatisfied, we’ll refund payment or fix issues.
+            </p>
+          </div>
+          <div class="lien">
+            <a href="#maison"
+              >Learn more <i class="fa-solid fa-chevron-right"></i
+            ></a>
+          </div>
         </div>
-        <div class="paragraphe1">
-          <p>
-            We offer a risk-free trial period of up to two weeks. You will only
-            have to pay if you are happy with the developer and wish to
-            continue. If you are unsatisfied, we’ll refund payment or fix <br />
-            issues on our dime period customers.
-          </p>
-        </div>
-        <div class="paragraphe2">
-          <p>
-            If you are happy with the developer and wish to continue. If you<br />
-            are unsatisfied, we’ll refund payment or fix issues.
-          </p>
-        </div>
-        <div class="lien">
-          <a href="#maison"
-            >Learn more <i class="fa-solid fa-chevron-right"></i
-          ></a>
+        <div class="right">
+          <img src="assets/image/cta-2.png" alt="" />
         </div>
       </div>
-      <div class="right">
-        <img src="assets/image/cta-2.png" alt="" />
-      </div>
+      <!-- ASSISTANCE FIN -->
     </div>
-    <!-- ASSISTANCE FIN -->
 
     <!-- NOUVELLES DEBUT -->
-    <div class="nouvelles" id="nouvelles">
+    <div class="nouvelles section" id="nouvelles">
       <div class="top">
         <p>Quality features</p>
       </div>
